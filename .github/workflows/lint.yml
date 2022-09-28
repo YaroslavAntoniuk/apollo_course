@@ -16,7 +16,7 @@ jobs:
     runs-on: ubuntu-latest
     defaults:
       run:
-        working-directory: client
+        working-directory: ./client
 
     steps:
       - name: Check out Git repository
@@ -30,7 +30,6 @@ jobs:
       # ESLint and Prettier must be in `package.json`
       - name: Install Node.js dependencies
         run: npm ci
-        working-directory: client
 
       - name: Run linters
         uses: wearerequired/lint-action@v2
