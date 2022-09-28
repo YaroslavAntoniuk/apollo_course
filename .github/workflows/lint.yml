@@ -14,6 +14,9 @@ jobs:
   run-linters:
     name: Run linters
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: client
 
     steps:
       - name: Check out Git repository
@@ -30,7 +33,7 @@ jobs:
         working-directory: client
 
       - name: Run linters
-        run: npm lint
+        run: npm run eslint \"**/*.{jsx,js}\"
         working-directory: client
         with:
           eslint: true
