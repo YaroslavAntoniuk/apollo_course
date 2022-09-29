@@ -18,6 +18,8 @@ const Footer = ({ children }) => {
 
 export default Footer;
 
+console.log('should error eslint');
+
 /** Footer styled components */
 const FooterContainer = styled.div({
   display: 'flex',
