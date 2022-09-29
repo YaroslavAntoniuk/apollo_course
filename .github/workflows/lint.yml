@@ -32,6 +32,7 @@ jobs:
         with:
           config_path: "./client/.eslintrc"
           extra_args: "--max-warnings=0"
+          filter-mode: "file"
           file_extensions: |
             **/*.js
             **/*.jsx
