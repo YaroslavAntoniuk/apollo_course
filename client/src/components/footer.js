@@ -18,9 +18,6 @@ const Footer = ({ children }) => {
 
 export default Footer;
 
-const Test = styled.div({
-  display: 'flex',
-});
 /** Footer styled components */
 const FooterContainer = styled.div({
   display: 'flex',
