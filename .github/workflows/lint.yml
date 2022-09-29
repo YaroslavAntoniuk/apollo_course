@@ -27,6 +27,11 @@ jobs:
         run: npm ci
         working-directory: client
 
-      - name: Run linters
-        run: npm run lint
-        working-directory: client
+      - name: Run eslint on changed files
+        uses: tj-actions/eslint-changed-files@v14
+        with:
+          config_path: "./client/.eslintrc"
+          extra_args: "--max-warnings=0"
+          file_extensions: |
+            **/*.js
+            **/*.jsx
